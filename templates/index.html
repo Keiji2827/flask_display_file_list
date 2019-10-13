@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+  <!-- Form
+  ================================================== -->
+<nv class="navbar navbar-dark bg-dark mt-3">
+  <a class="navbar-brand" href="#">NavBar</a>
+</nv>
+<meta http-equiv="refresh" content="60" >
+<div class="container mt-3">
+  <div class="row col-md-12">
+    <div class="m-1">
+      <form action="/" method="" class="form-inline">
+        <button type="submit" class="btn btn-primary">更新</button>
+      </form>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>PC1</h3>
+        <ul class="list-group">
+          {% for i in flist1 %}
+          <li class="list-group-item">{{i}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h3>PC2</h3>
+        <ul class="list-group">
+          {% for i in flist2 %}
+          <li class="list-group-item">{{i}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
